@@ -4,13 +4,16 @@
     <meta charset="utf-8">
     <title>API Mini-Project</title>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src='./script.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
 
-    <form action="http://sgp.transmitsms.com/post" method="post">
+    <!-- <form action="http://sgp.transmitsms.com/post" method="post">
     <input type="hidden" name="list_id" value="aea2c929f807e68b7c28cc7e6e32592d" />
     <input type="hidden" name="mobile_dest_country" value="SG" />
     <input type="hidden" name="redirect_url" value="http://sgp.transmitsms.com/post" />
@@ -26,34 +29,35 @@
       <input type="hidden" name="api" value="aea2c929f807e68b7c28cc7e6e32592d" />
       <label for="type">SMS</label>
       <input type="submit" value="Submit">
-    </form>
+    </form> -->
 
-    <form id="spotifySearch1">
+    <h2><img src="http://secondratebrain.com/images/spotify-logo-dark-360x162.png" height="70" width= "160">SEARCH</h2>
+
+    <form id="spotifySearch1" class="formBar">
       <label for="type">Album Search</label>
       <input type="textfield" name="q" id="spotify1">
-      <input type="submit" value="Search">
+      <input type="submit" value="Search" class="btn btn-default btn-xs">
     </form>
 
-    <form id="spotifySearch2">
+    <form id="spotifySearch2" class="formBar">
       <label for="type">Artist Search</label>
       <input type="textfield" name="q" id="spotify2">
-      <input type="submit" value="Search">
+      <input type="submit" value="Search" class="btn btn-default btn-xs">
     </form>
 
-    <form id="spotifySearch3">
+    <form id="spotifySearch3" class="formBar">
       <label for="type">Both?</label>
       <input type="textfield" name="q" id="spotify3">
-      <input type="submit" value="Search">
+      <input type="submit" value="Search" class="btn btn-default btn-xs">
     </form>
 
-    <form id="spotifySearch4">
+    <form id="spotifySearch4" class="formBar">
       <label for="type">Track Search</label>
       <input type="textfield" name="q" id="spotify4">
-      <input type="submit" value="Search">
+      <input type="submit" value="Search" class="btn btn-default btn-xs">
     </form>
 
     <div>
-      <h2>Results Here</h2>
       <ol>
         <div id="results">
 
