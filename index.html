@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>API Mini-Project</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src='./script.js'></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <form action="http://sgp.transmitsms.com/post" method="post">
+    <input type="hidden" name="list_id" value="aea2c929f807e68b7c28cc7e6e32592d" />
+    <input type="hidden" name="mobile_dest_country" value="SG" />
+    <input type="hidden" name="redirect_url" value="http://sgp.transmitsms.com/post" />
+    <label for="firstname">Firstname</label><input type="text" name="firstname" id="firstname" /><br />
+    <label for="lastname">Lastname</label><input type="text" name="lastname" id="lastname" /><br />
+    <label for="mobile">Mobile</label><input type="text" name="mobile" id="mobile" /><br />
+    <input type="checkbox" id="opt_in" name="opt_in" value="yes" style="width:auto" /> Yes, please add my mobile number to your SMS mailing list<br />
+    <input type="submit" value="Subscribe" />
+</form>
+
+    <form id = "sendSms">
+      <form action="http://sgp.transmitsms.com/post" method="post">
+      <input type="hidden" name="api" value="aea2c929f807e68b7c28cc7e6e32592d" />
+      <label for="type">SMS</label>
+      <input type="submit" value="Submit">
+    </form>
+
+    <form id="spotifySearch1">
+      <label for="type">Album Search</label>
+      <input type="textfield" name="q" id="spotify1">
+      <input type="submit" value="Search">
+    </form>
+
+    <form id="spotifySearch2">
+      <label for="type">Artist Search</label>
+      <input type="textfield" name="q" id="spotify2">
+      <input type="submit" value="Search">
+    </form>
+
+    <form id="spotifySearch3">
+      <label for="type">Both?</label>
+      <input type="textfield" name="q" id="spotify3">
+      <input type="submit" value="Search">
+    </form>
+
+    <form id="spotifySearch4">
+      <label for="type">Track Search</label>
+      <input type="textfield" name="q" id="spotify4">
+      <input type="submit" value="Search">
+    </form>
+
+    <div>
+      <h2>Results Here</h2>
+      <ol>
+        <div id="results">
+
+        </div>
+      </ol>
+    </div>
+
+
+  </body>
+
+</html>
