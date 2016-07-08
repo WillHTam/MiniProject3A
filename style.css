@@ -23,7 +23,9 @@ li{
 }
 
 .textentry {
-    color: #000;
+    color: #fff;
+    /*background-color: rgba(#0a0b0b, 0.81);*/
+    background-color: #1c1b1b;
 }
 
 #iframePad {
