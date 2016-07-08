@@ -65,7 +65,7 @@ $(document).ready(function () {
               success: function (result) {
                 console.log('request sent')
                 $.each(result.artists.items.concat(result.albums.items), function(index, item) {
-                  $('#results').append('<li>' + '<img src="' + item.images[0].url + '" height="100" width="100" class="art">' +  item.name + '</li>' + '<br>');
+                  $('#results').append('<li>' + item.name + '</li>' + '<br>');
                 })
             }
         });
