@@ -23,13 +23,21 @@ li{
 }
 
 .textentry {
-    color: #fff;
+    color: #cbcaca;
     /*background-color: rgba(#0a0b0b, 0.81);*/
     background-color: #1c1b1b;
 }
 
+ol {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-around;
+}
+
 #iframePad {
-  /*margin: 10px;*/
+  margin-bottom: 10px;
 }
 
 .formBar{
@@ -41,6 +49,7 @@ li{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
   margin-left: -20px;
   margin-right: auto;
 }

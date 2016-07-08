@@ -25,10 +25,10 @@ $(document).ready(function () {
       },
       success: function (result) {
         $.each(result.albums.items, function(index, item) {
-          $('#results').append('<li>' + '<img src="' + item.images[0].url + '" height="100" width="100" class="art">' +  item.name + '</li>' + '<br>');
+          $('#results').append('<li>' + '<img src="' + item.images[0].url + '" height="100" width="100" class="art">' + item.name + '</li>' + '<br>');
         });
       }
-  });
+    });
   });
 
   $('#spotifySearch2').on('submit', function (event) {
@@ -43,17 +43,17 @@ $(document).ready(function () {
         limit: 16
       },
       success: function (result) {
-        $.each(result.artists.items, function(index, item) {
-        $('#results').append('<li>' + '<img src="' + item.images[0].url + '" height="100" width="100" class="art">' +  item.name + '</li>' + '<br>');
+        $.each(result.artists.items, function (index, item) {
+        $('#results').append('<li>' + '<img src="' + item.images[0].url + '" height="100" width="100" class="art">' + item.name + '</li>' + '<br>');
       });
     }
   });
   });
 
   $('#spotifySearch3').on('submit', function (event) {
-        event.preventDefault();
-        console.log('clicked')
-        $('#results').empty();
+    event.preventDefault();
+    console.log('clicked');
+    $('#results').empty();
         var query = $('#spotify3').val();
         $.ajax({
               url: 'https://api.spotify.com/v1/search',
@@ -62,14 +62,14 @@ $(document).ready(function () {
                 type: 'artist,album',
                 limit: 30
               },
-              success: function (result) {
-                console.log('request sent')
-                $.each(result.artists.items.concat(result.albums.items), function(index, item) {
+          success: function (result) {
+            console.log('request sent');
+                $.each(result.artists.items.concat(result.albums.items), function (index, item) {
                   $('#results').append('<li>' + item.name + '</li>' + '<br>');
-                })
-            }
+                });
+              }
         });
-        });
+  });
 
   $('#spotifySearch4').on('submit', function (event) {
     event.preventDefault();
@@ -86,9 +86,8 @@ $(document).ready(function () {
         console.log(result);
         $.each(result.tracks.items, function (index, item) {
         $('#results').append('<iframe src="' + 'https://embed.spotify.com/?uri=' + item.uri + '"' + ' width="250" height="330" frameborder="0" allowtransparency="true" id="iframePad"></iframe>');
-      });
-    }
+        });
+      }
+    });
   });
-  });
-
 });
